@@ -17,7 +17,7 @@ func Manejadores() {
 	if PORT == "" {
 		PORT = "8080"
 	}
-	handler := cors.AllowAll()._Handler(router)
-	log.Fatal(http.ListenAndServer(":"+PORT, handler))
+	handler := cors.AllowAll().Handler(router)
+	log.Fatal(http.ListenAndServe(":"+PORT, handler))
 
 }
