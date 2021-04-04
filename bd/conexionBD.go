@@ -10,7 +10,7 @@ import (
 
 /* MpngoCN es el Objeto ala conexion a la BD*/
 var MongoCN = ConectarBD()
-var clientOptions = options.Client().ApplyURI("mongodb+srv://salgadoisai:<Jehova777>@cluster0.sjyak.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+var clientOptions = options.Client().ApplyURI("mongodb+srv://salgadoisai:Jehova777@redsocialt.f3qs2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 /* ConectarBD es la funcion que permite connetar la BD */
 func ConectarBD() *mongo.Client {
@@ -37,5 +37,4 @@ func ChequeoConnection() int {
 		return 0
 	}
 	return 1
-
 }
