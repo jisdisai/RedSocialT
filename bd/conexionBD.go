@@ -9,8 +9,8 @@ import (
 )
 
 /* MpngoCN es el Objeto ala conexion a la BD*/
-var MongoCN = conectarBD()
-var clientOptions = options.Client().ApplyURI("mongodb+srv://salgadoisai:<password>@cluster0.sjyak.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+var MongoCN = ConectarBD()
+var clientOptions = options.Client().ApplyURI("mongodb+srv://salgadoisai:<Jehova777>@cluster0.sjyak.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 /* ConectarBD es la funcion que permite connetar la BD */
 func ConectarBD() *mongo.Client {
@@ -20,7 +20,7 @@ func ConectarBD() *mongo.Client {
 		return client
 	}
 
-	err = MongoCN.Ping(context.TODO(), nil)
+	err = client.Ping(context.TODO(), nil)
 	if err != nil {
 		log.Fatal(err.Error())
 		return client
@@ -32,7 +32,7 @@ func ConectarBD() *mongo.Client {
 
 /* ChequeoConnection es el ping a la base de datos */
 func ChequeoConnection() int {
-	err := client.Ping(context.TODO(), nil)
+	err := MongoCN.Ping(context.TODO(), nil)
 	if err != nil {
 		return 0
 	}
