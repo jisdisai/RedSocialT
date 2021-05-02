@@ -6,6 +6,7 @@ import (
 	"github.com/jisdisai/RedSocialT/bd"
 )
 
+/* ChequeoBD es el middlew que me permite conocer el estado de la BD */
 func ChequeoBD(next http.HandlerFunc) http.HandlerFunc {
 
 	return func(w http.ResponseWriter, r *http.Request) {

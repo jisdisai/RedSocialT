@@ -6,8 +6,8 @@ import (
 	"os"
 
 	"github.com/gorilla/mux"
-	"github.com/jisdisai/RedSocialt/middlew"
-	"github.com/jisdisai/RedSocialt/routers"
+	"github.com/jisdisai/RedSocialT/middlew"
+	"github.com/jisdisai/RedSocialT/routers"
 	"github.com/rs/cors"
 )
 
