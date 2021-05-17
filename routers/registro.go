@@ -28,7 +28,7 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 
 	/* validacion de la contraseña*/
 
-	if len(t.Password) < 6 {
+	if len(t.Password) > 6 {
 		http.Error(w, "Debe especificar una contraseña de al menos de 6 Caracteres ", 400)
 		return
 	}
