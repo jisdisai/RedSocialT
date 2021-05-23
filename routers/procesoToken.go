@@ -26,13 +26,13 @@ func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
 		return claims, false, string(""), errors.New("formato de token invalido")
 	}
 
-	tk = string.TrimSpace(splitToken[1])
+	tk = strings.TrimSpace(splitToken[1])
 
 	tkn, err := jwt.ParseWithClaims(tk, claims, func(token *jwt.Token) (interface{}, error) {
 		return miClave, nil
 	})
 	if err == nil {
-		_, encontrado, ID := bd.ChequeoYaExisteUsuario(claims.Email)
+		_, encontrado, _ := bd.ChequeoYaExisteUsuario(claims.Email)
 		if encontrado == true {
 			Email = claims.Email
 			IDUsuario = claims.ID.Hex()
