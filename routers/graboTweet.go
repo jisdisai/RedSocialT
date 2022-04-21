@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/jisdisai/RedSocialT/bd"
-	"github.com/jisdisai/RedSocialT/models"
+	"github.com\jisdisai\RedSocialT\models"
 )
 
 /* GraboTweet permite grabar el tweet en la BD */

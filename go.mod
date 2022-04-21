@@ -1,13 +1,25 @@
 module github.com/jisdisai/RedSocialT
 
-go 1.13
+go 1.18
 
 require (
-	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gorilla/mux v1.8.0
-	github.com/rs/cors v1.7.0
-	github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c // indirect
-	github.com/xdg/stringprep v0.0.0-20180714160509-73f8eece6fdc // indirect
-	go.mongodb.org/mongo-driver v1.5.1
-	golang.org/x/crypto v0.0.0-20210322153248-0c34fe9e7dc2 // indirect
+	github.com/rs/cors v1.8.2
+	go.mongodb.org/mongo-driver v1.9.0
+	golang.org/x/crypto v0.0.0-20220411220226-7b82a4e95df4
+	github.com/jisdisai/RedSocialT/models v1.0.0-20200721133347-f9f8f8f8f8f8f
+)
+
+require (
+	github.com/go-stack/stack v1.8.0 // indirect
+	github.com/golang/snappy v0.0.1 // indirect
+	github.com/klauspost/compress v1.13.6 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
+	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
+	github.com/xdg-go/scram v1.0.2 // indirect
+	github.com/xdg-go/stringprep v1.0.2 // indirect
+	github.com/youmark/pkcs8 v0.0.0-20181117223130-1be2e3e5546d // indirect
+	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
+	golang.org/x/text v0.3.6 // indirect
 )
