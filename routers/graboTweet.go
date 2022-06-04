@@ -1,7 +1,6 @@
 package routers
 
 import (
-	"encoding/json"
 	"net/http"
 	"time"
 
@@ -13,7 +12,7 @@ import (
 func GraboTweet(w http.ResponseWriter, r *http.Request) {
 
 	var mensaje models.Tweet
-	err := json.NewDecoder(r.Body).Decode(&mensaje)
+	//err := json.NewDecoder(r.Body).Decode(&mensaje)
 
 	Registro := models.GraboTweet{
 		UserID:  IDUsuario,
@@ -27,7 +26,7 @@ func GraboTweet(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if status == false {
+	if status == !status {
 		http.Error(w, "No se ha logrado innsertar el Tweet", 400)
 		return
 	}
